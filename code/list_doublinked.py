@@ -35,7 +35,9 @@ class DLList(LList1):  # class of Double Linked List
             raise LinkedListUnderflow("in pop of LDList")
         e = self._head.elem
         self._head = self._head.next
-        if self._head:
+        if self._head is None:
+            self._rear = None  # it is empty now
+        else:
             self._head.prev = None
         return e
 
