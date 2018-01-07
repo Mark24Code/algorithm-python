@@ -150,29 +150,31 @@ if __name__ == '__main__':
 
     for i in range(10):
         mlist1.prepend(i)
-
-    for i in range(11, 20):
-        mlist1.append(i)
-
-    mlist1.printall()
-    for i in range(5):
-        print(mlist1.pop())
-        print(mlist1.pop_last())
-
-    print('remained:')
-    mlist1.printall()
-    mlist1.rev()
-    print('\nreversed:')
+    print('===')
     mlist1.printall()
 
-    mlist1.sort()
-    print('\nsorted:')
-    mlist1.printall()
-    for x in mlist1.elements():
-        print(x)
-    print('\n')
-
-    list1 = [random.randint(1, 50) for i in range(20)]
-    print(list1, '\n')
-    list_sort(list1)
-    print(list1)
+    # for i in range(11, 20):
+    #     mlist1.append(i)
+    #
+    # mlist1.printall()
+    # for i in range(5):
+    #     print(mlist1.pop())
+    #     print(mlist1.pop_last())
+    #
+    # print('remained:')
+    # mlist1.printall()
+    # mlist1.rev()
+    # print('\nreversed:')
+    # mlist1.printall()
+    #
+    # mlist1.sort()
+    # print('\nsorted:')
+    # mlist1.printall()
+    # for x in mlist1.elements():
+    #     print(x)
+    # print('\n')
+    #
+    # list1 = [random.randint(1, 50) for i in range(20)]
+    # print(list1, '\n')
+    # list_sort(list1)
+    # print(list1)

@@ -11,6 +11,7 @@ class LNode:
 
 
 def length(head):
+
     p, n = head, 0
     while p:
         n += 1

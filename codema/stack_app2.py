@@ -125,7 +125,7 @@ def maze_solver(maze, start, end):
 ####### Search a maze using a queue ##############
 ####### No path record ###########################
 
-
+path_dict = {}
 def maze_solver_queue(maze, start, end):
     if start == end:
         print("Path finds.")
@@ -141,8 +141,14 @@ def maze_solver_queue(maze, start, end):
             if passable(maze, nextp):      # find new position
                 if nextp == end:           # end position, :-)
                     print("Path finds.")   # where is the path??
+                    pt = path_dict.get(pos,None)
+                    print(nextp,end="  ")
+                    while pt:
+                        print(pt,end="  ")
+                        pt = path_dict.get(pt,None)
                     return
                 mark(maze, nextp)
+                path_dict[nextp]=pos
                 qu.enqueue(nextp)          # new position into queue
     print("No path.")  # :-(
 
@@ -219,9 +225,14 @@ def maze_solver1(maze, start, end):
 
 
 if __name__ == "__main__":
-    pass
-#    maze_solver_rec(maze1, (1,1), (18,18))
-#    maze_solver1(maze1, (1,1), (18,18))
 
-#    maze_solver_queue(maze1, (1,1), (18,18))
+    import copy
+
+    maze11 = copy.deepcopy(maze1)
+    # maze_solver_queue(maze1, (1, 1), (18, 18))
+
+    maze_solver(maze11, (1,1), (18,18))
+    print('>>>')
+    maze_solver1(maze1, (1,1), (18,18))
+
 #    print(maze_solver_queue1(maze1, (1,1), (18,18)))
