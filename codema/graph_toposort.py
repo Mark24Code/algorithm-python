@@ -4,6 +4,7 @@
 from graph import *
 
 
+
 # We suppose that A[i][i] = unconn value
 def toposort(graph):
     vnum = graph.vertex_num()
